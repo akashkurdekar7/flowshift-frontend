@@ -1,10 +1,10 @@
 import {useState} from "react";
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Toolbar from './components/Toolbar';
+import Toolbar from "./components/Toolbar";
 import Ui from "./components/Ui";
 import Submit from "./components/Submit";
-import Result from './components/Result';
+import Result from "./components/Result";
 
 function App() {
   const [modalData, setModalData] = useState({isOpen: false, results: {}});
@@ -18,9 +18,7 @@ function App() {
       <Toolbar />
       <Ui />
       <div className="submit-container">
-        <Submit
-          onResult={(results) => setModalData({isOpen: true, results})}
-        />
+        <Submit onResult={(results) => setModalData({isOpen: true, results})} />
       </div>
       <Result
         isOpen={modalData.isOpen}

@@ -103,9 +103,10 @@ body {
 
   position: relative;
   overflow: hidden;
-
+  padding-right: 20px;
+  border-right: 1px solid var(--border-light);
   /* gradient text */
-  background: linear-gradient(90deg, #a78bfa, #60a5fa);
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -116,8 +117,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-
-  background: linear-gradient(90deg, #a78bfa, #60a5fa);
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -158,7 +158,7 @@ body {
     left: 150%;
   }
 }
-.toolbar-title {
+/* .toolbar-title {
   font-size: 1rem;
   font-weight: 700;
 
@@ -167,10 +167,10 @@ body {
   -webkit-text-fill-color: transparent;
 
   position: relative;
-}
+} */
 
 /* subtle glow */
-.toolbar-title::after {
+/* .toolbar-title::after {
   content: "FlowShift";
   position: absolute;
   left: 0;
@@ -183,7 +183,7 @@ body {
   filter: blur(6px);
   opacity: 0.4;
   z-index: -1;
-}
+} */
 
 .toolbar-items {
   display: flex;
@@ -282,7 +282,7 @@ body {
 /* Edge Animation & Styles */
 .react-flow__edge-path {
   stroke-width: 2.5;
-  stroke: #475569; /* Slate 600 */
+  stroke: var(--text-muted);
   transition:
     stroke 0.3s,
     stroke-width 0.3s,
@@ -357,7 +357,7 @@ body {
   cursor: pointer;
   color: #64748b;
   padding-left: 20px;
-  border-left: 1px solid #64748b;
+  border-left: 1px solid var(--border-light);
 }
 
 .draggable-node {
